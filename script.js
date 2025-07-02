@@ -13,7 +13,7 @@ const generateRandNo = (min, max) => {
 
 const handleFirstClick = (e) => {
   if (!e.target.previousElementSibling) {
-    normalMessage.innerText = "The pole has no ring, Select another one !!!";
+    normalMessage.innerText = "The pole you are trying to select has no ring, Select another one !!!";
     normalMessage.classList.add("redish");
     clearTimeout(timeOut);
     timeOut = setTimeout(() => {

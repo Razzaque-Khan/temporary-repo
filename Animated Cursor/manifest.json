@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Cursor Follower",
+    "version": "1.0",
+    "description": "A simple Cursor Follower",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "icons": {
+        "48": "cursor.png"
+    }
+}
