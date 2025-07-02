@@ -100,14 +100,11 @@ html {
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  transition: border-top-left-radius var(--moveBtn-border-trasition-delay) 0s ease-in-out,
-    border-top-right-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) ease-in-out,
-    border-bottom-right-radius var(--moveBtn-border-trasition-delay) 0s ease-in-out,
-    border-bottom-left-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) ease-in-out;
-  /* transition-property: background-color, border, border-radius;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out; */
-  /* animation: animate-btn-remove 1s ease-in-out 1 forwards; */
+  transition: background-color calc(var(--moveBtn-border-trasition-delay) * 4) linear,
+    border-top-left-radius var(--moveBtn-border-trasition-delay) 0s linear,
+    border-top-right-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) linear,
+    border-bottom-right-radius var(--moveBtn-border-trasition-delay) 0s linear,
+    border-bottom-left-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) linear;
 }
 
 .moveBtn:hover {
