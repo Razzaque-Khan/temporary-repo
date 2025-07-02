@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --pole-height: 250px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 190px;
+  background-color: rgb(38, 30, 50);
+}
+
+.poles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 190px;
+}
+
+.step-count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  outline: 3px solid rgba(162, 123, 188, 0.194);
+  outline-offset: 5px;
+  background-color: rgba(162, 123, 188, 0.194);
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+
+  span {
+    font-size: 60px;
+    font-weight: 600;
+  }
+}
+
+.redish {
+  animation: redish 0.2s ease-in-out 5 forwards alternate-reverse;
+}
+
+.pole {
+  position: relative;
+  height: var(--pole-height);
+  width: 20px;
+  border-radius: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: gray;
+  transition: opacity 0.2s ease-in-out;
+  box-shadow: 0 -3px 8px 0 black, inset 0 -50px 20px -30px rgb(38, 30, 50);
+}
+
+.ring {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, 0) rotateX(45deg);
+  height: 30px;
+  border-radius: 10px;
+  /* border: 2px solid #00000050;
+    border-bottom: 6px solid #00000050; */
+  background-color: green;
+  /* box-shadow: inset 0 -50px 50px -60px black, 0 0 5px black; */
+  transition: all 0.3s ease-in-out;
+}
+
+.moveBtn {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50px;
+  padding: 3px 10px;
+  width: 120px;
+  border: 3px solid rgb(93, 64, 138);
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.moveBtn:hover {
+  background-color: rgb(59, 40, 88);
+}
+
+.normal-message {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: fit-content;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  outline: 3px solid rgba(162, 123, 188, 0.194);
+  outline-offset: 5px;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: rgba(162, 123, 188, 0.194);
+}
+
+@keyframes redish {
+  0% {
+    /* color: rgb(255, 0, 0); */
+    outline-color: rgb(255, 0, 0);
+  }
+  100% {
+    /* color: rgb(255, 177, 163); */
+    outline-color: rgb(255, 177, 163);
+  }
+}
