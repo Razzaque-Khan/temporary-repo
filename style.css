@@ -14,6 +14,22 @@ html {
 :root {
   --pole-height: 280px;
   --moveBtn-border-trasition-delay: .2s;
+  --border-left-color: #ff7474;
+  --border-bottom-color: #a4de3f;
+  --border-right-color: #51b2ea;
+  --border-top-color: #ab5dff;
+
+
+
+  --transition: box-shadow calc(var(--moveBtn-border-trasition-delay) * 2) 0s linear,
+    border-top-left-radius var(--moveBtn-border-trasition-delay) 0s linear,
+    border-left-color var(--moveBtn-border-trasition-delay) 0s linear,
+    border-top-right-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 0.5) linear,
+    border-bottom-color var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 0.5) linear,
+    border-bottom-right-radius var(--moveBtn-border-trasition-delay) 0s linear,
+    border-right-color var(--moveBtn-border-trasition-delay) 0s linear,
+    border-bottom-left-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 0.5) linear,
+    border-top-color var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 0.5) linear;
 }
 
 .container {
@@ -94,22 +110,24 @@ html {
   border-radius: 5px;
   transform: translate(-50%, 0);
   padding: 6px 30px;
-  border: 4px solid rgb(93, 64, 138);
+  border: 4px solid rgb(82, 55, 119);
   background-color: transparent;
   color: white;
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  transition: background-color calc(var(--moveBtn-border-trasition-delay) * 4) linear,
-    border-top-left-radius var(--moveBtn-border-trasition-delay) 0s linear,
-    border-top-right-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) linear,
-    border-bottom-right-radius var(--moveBtn-border-trasition-delay) 0s linear,
-    border-bottom-left-radius var(--moveBtn-border-trasition-delay) calc(var(--moveBtn-border-trasition-delay) * 2) linear;
+  transition: var(--transition);
+  box-shadow: inset 0 0 5px 0 rgb(121, 96, 160);
+  box-sizing: content-box;
 }
 
 .moveBtn:hover {
+  box-shadow: inset 0 0 20px 0 rgb(121, 96, 160);
   border-radius: 35px;
-  background-color: rgb(59, 40, 88);
+  border-top-color: var(--border-top-color);
+  border-right-color: var(--border-right-color);
+  border-bottom-color: var(--border-bottom-color);
+  border-left-color: var(--border-left-color);
 }
 
 .normal-message {
